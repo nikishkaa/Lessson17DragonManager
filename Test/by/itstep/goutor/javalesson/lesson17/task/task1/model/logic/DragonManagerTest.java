@@ -128,4 +128,27 @@ public class DragonManagerTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testCountHeadsBySecondPeriod1() {
+
+        dragon.setAge(100);
+        int expected = 703;
+
+        // Act
+        int actual = DragonManager.countHeads(dragon);
+
+        // Assert
+        assertEquals(expected, actual);
+    }
+
+    private void init(){
+        Dragon dragon = new Dragon();
+        dragon.setName("123");
+
+    }
+
+    private void destroy(){
+        dragon = null;
+    }
+
 }
