@@ -18,8 +18,10 @@ public class Main {
 
         Printer.print(dragon1 + "\n");
         Printer.print(dragon2 + "\n");
-        Printer.print(dragon1.name + ": age = " + dragon1.age + " head " + head1 + "\n");
-        Printer.print(dragon2.name + ": age = " + dragon2.age + " head " + head2 + "\n");
+        Printer.print(dragon1.getName() + ": age = " + dragon1.getAge()
+                + " head " + head1 + "\n");
+        Printer.print(dragon2.getName() + ": age = " + dragon2.getName()
+                + " head " + head2 + "\n");
 
 
     }

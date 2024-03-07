@@ -3,8 +3,8 @@ package by.itstep.goutor.javalesson.lesson17.task.task1.model.data;
 public class Dragon {
 
 
-    public String name;
-    public int age;
+    private String name;
+    private int age;
 
     public Dragon(String name, int age) {
         this.name = name;

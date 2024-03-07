@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class DragonManagerTest {
     @Test
-    public void testDragonManager() {
+    public void DragonManagerTest() {
 
         Dragon dragon = new Dragon("A", 100);
 

@@ -7,7 +7,7 @@ import by.itstep.goutor.javalesson.lesson17.task.task1.model.logic.DragonManager
 public class DragonUI {
     public static String format(Dragon dragon) {
 
-        return String.format("Dragon %s has %d heads.", dragon.name);
+        return String.format("Dragon %s has %d heads.", dragon.getName());
     }
 
 
