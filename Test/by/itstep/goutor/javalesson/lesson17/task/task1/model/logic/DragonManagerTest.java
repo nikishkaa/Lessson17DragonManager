@@ -1,18 +1,36 @@
 package by.itstep.goutor.javalesson.lesson17.task.task1.model.logic;
 
 import by.itstep.goutor.javalesson.lesson17.task.task1.model.data.Dragon;
-import org.junit.After;
+import org.junit.*;
 import org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class DragonManagerTest {
 
-    private Dragon dragon;
+    private static Dragon dragon;
+@BeforeClass
+    public static void init1(){
+        dragon = new Dragon();
+        dragon.setName("Gorinich");
+        System.out.println("Before class 1");
 
-    @Before
+    }
+    @AfterClass
+    public static void init2(){
+        dragon = new Dragon();
+        dragon.setName("Gorinich");
+        System.out.println("After class 1");
+
+    }
+
+
+/*    static {
+        dragon = new Dragon();
+        dragon.setName("123");
+    }*/
+
+  /*  @Before
     public void init() {
         dragon = new Dragon();
         dragon.setName("Gorinich");
@@ -22,7 +40,7 @@ public class DragonManagerTest {
     @After
     public void destroy() {
         dragon = null;
-    }
+    } */
 
     @Test
     public void testCountHeadsByFirstPeriod() {
