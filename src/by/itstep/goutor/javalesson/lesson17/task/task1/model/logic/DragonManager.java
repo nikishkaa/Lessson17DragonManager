@@ -12,7 +12,7 @@ public class DragonManager {
 
     public static int countHeads(Dragon dragon) {
         if (dragon == null) {
-            return -1;
+            return 0;
         }
 
         int head = BORN_HEADS;
