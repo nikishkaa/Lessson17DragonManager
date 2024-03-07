@@ -1,12 +1,29 @@
 package by.itstep.goutor.javalesson.lesson17.task.task1.model.logic;
 
 import by.itstep.goutor.javalesson.lesson17.task.task1.model.data.Dragon;
+import org.junit.After;
 import org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class DragonManagerTest {
+
+    private Dragon dragon;
+
+    @Before
+    public void init() {
+        dragon = new Dragon();
+        dragon.setName("Gorinich");
+
+    }
+
+    @After
+    public void destroy() {
+        dragon = null;
+    }
+
     @Test
     public void testCountHeadsByFirstPeriod() {
 
@@ -131,7 +148,7 @@ public class DragonManagerTest {
     @Test
     public void testCountHeadsBySecondPeriod1() {
 
-        dragon.setAge(100);
+        dragon.setAge(250);
         int expected = 703;
 
         // Act
@@ -141,14 +158,5 @@ public class DragonManagerTest {
         assertEquals(expected, actual);
     }
 
-    private void init(){
-        Dragon dragon = new Dragon();
-        dragon.setName("123");
-
-    }
-
-    private void destroy(){
-        dragon = null;
-    }
 
 }
