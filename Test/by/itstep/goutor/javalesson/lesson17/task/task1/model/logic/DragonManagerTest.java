@@ -1,23 +1,24 @@
 package by.itstep.goutor.javalesson.lesson17.task.task1.model.logic;
 
 import by.itstep.goutor.javalesson.lesson17.task.task1.model.data.Dragon;
-import org.junit.Assert;
+import org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class DragonManagerTest {
     @Test
-    public void DragonManagerTest() {
+    public void testCountHeadsByFirstPeriod() {
 
-        Dragon dragon = new Dragon("A", 100);
+        // Arrange
+        Dragon dragon = new Dragon("Gorinich", 100);
 
         int expected = 303;
 
+        // Act
         int actual = DragonManager.countHeads(dragon);
 
-
-        if (actual != expected) {
-            Assert.fail();
-        }
-
+        // Assert
+        assertEquals(expected, actual);
     }
 }
