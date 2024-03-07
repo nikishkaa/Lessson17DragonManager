@@ -11,7 +11,7 @@ public class DragonManager {
 
 
     public static int countHeads(Dragon dragon) {
-        if (dragon == null) {
+        if (dragon == null || dragon.getName().equals("no name")) {
             return 0;
         }
 
