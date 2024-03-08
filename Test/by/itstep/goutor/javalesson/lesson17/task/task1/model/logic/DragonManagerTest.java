@@ -9,15 +9,17 @@ import static org.junit.Assert.assertEquals;
 public class DragonManagerTest {
 
     private static Dragon dragon;
-@BeforeClass
-    public static void init1(){
+
+    @BeforeClass
+    public static void init1() {
         dragon = new Dragon();
         dragon.setName("Gorinich");
         System.out.println("Before class 1");
 
     }
+
     @AfterClass
-    public static void init2(){
+    public static void init2() {
         dragon = new Dragon();
         dragon.setName("Gorinich");
         System.out.println("After class 1");
@@ -173,6 +175,26 @@ public class DragonManagerTest {
         int actual = DragonManager.countHeads(dragon);
 
         // Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCountHead300Years() {
+        dragon.setAge(300);
+        int expected = 803;
+
+        int actual = DragonManager.countHeads(dragon);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCountThirdPeriodHead() {
+        dragon.setAge(350);
+        int expected = 853;
+
+        int actual = DragonManager.countHeads(dragon);
+
         assertEquals(expected, actual);
     }
 
